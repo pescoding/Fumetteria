@@ -1,0 +1,104 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Swag barca</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content >
+  
+    <div>
+
+      <form>
+
+        <ion-grid class="set-grid">
+
+          <ion-row>
+
+            <ion-col class="ion-text-center">
+
+              <img style="padding: 50px;" class="ion-float-center" src="../../../assets/logo.png" alt="Logo">
+
+              <h3>{{titolo}}</h3>
+
+            </ion-col>
+
+          </ion-row>
+
+          <br>
+          <br>
+          <br>
+
+          <ion-row>
+            <ion-col>
+
+            </ion-col>
+
+            <ion-col>
+              <ion-item>
+
+                <ion-label position="floating">Username</ion-label>
+                <ion-input name="inputBello" [(ngModel)]="username"></ion-input>
+                <ion-icon slot="end" name="mail-sharp"></ion-icon>
+
+              </ion-item>
+            </ion-col>
+
+            <ion-col>
+
+            </ion-col>
+
+          </ion-row>
+
+          <br>
+          <br>
+
+          <ion-row>
+            <ion-col>
+
+            </ion-col>
+
+            <ion-col>
+              <ion-item>
+
+                <ion-label position="floating">Password</ion-label>
+                <ion-input type="password"></ion-input>
+                <ion-icon slot="end" name="lock-closed"></ion-icon>
+
+              </ion-item>
+            </ion-col>
+
+            <ion-col>
+
+            </ion-col>
+
+          </ion-row>
+
+          <br>
+          <br>
+
+          <ion-row>
+
+            <ion-col>
+
+            </ion-col>
+
+            <ion-col>
+              
+              <ion-button (click)="eventoDiClick()" class="ion-float-right" expand="block">LOGIN</ion-button>
+              <a routerLink="/registrazione">Registrati</a>
+
+            </ion-col>
+
+            <ion-col>
+
+            </ion-col>
+
+          </ion-row>
+
+        </ion-grid>
+
+      </form>
+
+    </div>
+
+</ion-content>
