@@ -1,0 +1,81 @@
+<ion-content class="ion-padding" >
+
+  <ion-grid>
+
+    <ion-row>
+
+      <ion-col>
+
+      </ion-col>
+
+      <ion-col class="ion-text-center">
+
+        <app-titolo-dev-skill titolo="Converti qui!"></app-titolo-dev-skill>
+
+      </ion-col>
+
+      <ion-col>
+
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+
+  <div>
+
+    <form>
+
+    <ion-grid>
+
+      <div class="ion-text-center">
+
+      <br>
+
+      </div>
+
+      <ion-row>
+        
+        <ion-col>
+          
+        </ion-col>
+
+        <ion-col class="bordi">
+          
+          <ion-grid>
+
+            <ion-row>
+  
+              <ion-col class="bordi" size="3">
+                <app-input-convertitore [unita]="'C'" [valore]="c" (eventoControllo)="eventoNotifica($event)"></app-input-convertitore>
+              </ion-col>
+
+              <ion-col class="bordi" size="3">
+                <app-input-convertitore [unita]="'F'" [valore]="f" (eventoControllo)="eventoNotifica($event)"></app-input-convertitore>
+              </ion-col>
+
+              <ion-col class="bordi" size="3">
+                <app-input-convertitore [unita]="'KM'" [valore]="km" (eventoControllo)="eventoNotifica($event)"></app-input-convertitore>
+              </ion-col>
+
+              <ion-col class="bordi" size="3">
+                <app-input-convertitore [unita]="'MI'" [valore]="mi" (eventoControllo)="eventoNotifica($event)"></app-input-convertitore>
+              </ion-col>
+              
+            </ion-row>
+
+          </ion-grid>
+
+        </ion-col>
+
+        <ion-col>
+          
+        </ion-col>
+
+      </ion-row>
+
+    </ion-grid>
+  </form>
+  </div>
+
+</ion-content>

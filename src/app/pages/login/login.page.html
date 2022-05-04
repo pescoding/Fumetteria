@@ -16,9 +16,7 @@
 
             <ion-col class="ion-text-center">
 
-              <img style="padding: 50px;" class="ion-float-center" src="../../../assets/logo.png" alt="Logo">
-
-              <h3>{{titolo}}</h3>
+              <app-titolo-dev-skill titolo="Inserisci i dati per il login" ></app-titolo-dev-skill>
 
             </ion-col>
 
@@ -34,13 +32,9 @@
             </ion-col>
 
             <ion-col>
-              <ion-item>
-
-                <ion-label position="floating">Username</ion-label>
-                <ion-input name="inputBello" [(ngModel)]="username"></ion-input>
-                <ion-icon slot="end" name="mail-sharp"></ion-icon>
-
-              </ion-item>
+  
+             <app-input-username icona="person-sharp" tipo="text" nome="Username"></app-input-username>
+              
             </ion-col>
 
             <ion-col>
@@ -58,13 +52,9 @@
             </ion-col>
 
             <ion-col>
-              <ion-item>
 
-                <ion-label position="floating">Password</ion-label>
-                <ion-input type="password"></ion-input>
-                <ion-icon slot="end" name="lock-closed"></ion-icon>
-
-              </ion-item>
+                <app-input-username icona="lock-closed" tipo="password" nome="Password"></app-input-username>
+                
             </ion-col>
 
             <ion-col>
@@ -85,7 +75,7 @@
             <ion-col>
               
               <ion-button (click)="eventoDiClick()" class="ion-float-right" expand="block">LOGIN</ion-button>
-              <a routerLink="/registrazione">Registrati</a>
+              <app-bottone-personalizzato link="/registrazione" parola="Registrati"></app-bottone-personalizzato>
 
             </ion-col>
 

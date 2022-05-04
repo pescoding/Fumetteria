@@ -20,9 +20,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/registrazione/registrazione.module').then( m => m.RegistrazionePageModule)
   },
   {
-    path: 'convertitore',
-    loadChildren: () => import('./pages/convertitore/convertitore.module').then( m => m.ConvertitorePageModule)
+    path: 'converter',
+    loadChildren: () => import('./pages/converter/converter.module').then( m => m.ConverterPageModule)
   },
+
 ];
 
 @NgModule({

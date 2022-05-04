@@ -7,6 +7,10 @@ import { IonicModule } from '@ionic/angular';
 import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
+import { TitoloDevSkillComponent } from 'src/app/components/titolo-dev-skill/titolo-dev-skill.component';
+import { InputUsernameComponent } from 'src/app/components/input-username/input-username.component';
+import { BottonePersonalizzatoComponent } from 'src/app/components/bottone-personalizzato/bottone-personalizzato.component';
+import { InputConvertitoreComponent } from 'src/app/components/input-convertitore/input-convertitore.component';
 
 @NgModule({
   imports: [
@@ -15,6 +19,6 @@ import { LoginPage } from './login.page';
     IonicModule,
     LoginPageRoutingModule
   ],
-  declarations: [LoginPage]
+  declarations: [LoginPage, TitoloDevSkillComponent, InputUsernameComponent, BottonePersonalizzatoComponent, InputConvertitoreComponent]
 })
 export class LoginPageModule {}

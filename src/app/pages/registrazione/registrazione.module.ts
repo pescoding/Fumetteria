@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { RegistrazionePageRoutingModule } from './registrazione-routing.module';
 
 import { RegistrazionePage } from './registrazione.page';
+import { TitoloDevSkillComponent } from 'src/app/components/titolo-dev-skill/titolo-dev-skill.component';
+import { BottonePersonalizzatoComponent } from 'src/app/components/bottone-personalizzato/bottone-personalizzato.component';
 
 @NgModule({
   imports: [
@@ -15,6 +17,6 @@ import { RegistrazionePage } from './registrazione.page';
     IonicModule,
     RegistrazionePageRoutingModule
   ],
-  declarations: [RegistrazionePage]
+  declarations: [RegistrazionePage, TitoloDevSkillComponent, BottonePersonalizzatoComponent]
 })
 export class RegistrazionePageModule {}

@@ -1,16 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-converter',
+  templateUrl: './converter.page.html',
+  styleUrls: ['./converter.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class ConverterPage implements OnInit {
 
-  titolo: string = "Benvenuti";
-
-  username: string;
-  password: string;
+  titolo: string = "Converti qui!";
 
   c: number;
   f: number;
@@ -48,12 +45,6 @@ export class LoginPage implements OnInit {
       this.km = valore;
 
     }
-
-  }
-
-  eventoDiClick(): void{
-    
-    alert("Ciao " + this.username + "!");
 
   }
 

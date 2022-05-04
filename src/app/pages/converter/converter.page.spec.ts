@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ConvertitorePage } from './convertitore.page';
+import { ConverterPage } from './converter.page';
 
-describe('ConvertitorePage', () => {
-  let component: ConvertitorePage;
-  let fixture: ComponentFixture<ConvertitorePage>;
+describe('ConverterPage', () => {
+  let component: ConverterPage;
+  let fixture: ComponentFixture<ConverterPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ConvertitorePage ],
+      declarations: [ ConverterPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ConvertitorePage);
+    fixture = TestBed.createComponent(ConverterPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
