@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registrazione',
@@ -7,52 +8,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrazionePage implements OnInit {
 
-  username: string;
-  mail: string;
-  password: string;
-  confermaPassword: string;
+  mioForm;
 
-  constructor() { }
+  disabile: boolean = true;
 
-  eventoDiClick(): void {
+  constructor(private fb: FormBuilder) { 
+
+    this.mioForm = fb.group({
+      username: ['', Validators.required],
+      email: ['', Validators.email],
+      password: ['', Validators.required],
+      confermaPassword: ['', Validators.required]
+    });
+
+  }
+
+  eventoBottone(): void{
     
-    let opzione: Boolean = true;
+    if (this.mioForm.get("username").valid && this.mioForm.get("email").valid && this.mioForm.get("password").valid && this.mioForm.get("confermaPassword").valid)
+      this.disabile = false;
+    else
+      this.disabile = true;
 
-    if (!this.username) {
-      
-      alert("Inserire un username.");
-      opzione = false;
+  }
 
-    }
-    else if (!this.mail) {
-      
-      alert("Inserire una mail.");
-      opzione = false;
-
-    }
-    else if (!this.password) {
-      
-      alert("Inserire una password.");
-      opzione = false;
-
-    }
-    else if (!this.confermaPassword) {
-      
-      alert("Inserire la password di conferma.");
-      opzione = false;
-
-    }
-    else if (this.password != this.confermaPassword) {
-      
-      alert("La password di conferma è diversa dalla password impostata");
-      opzione = false;
-
-    }
+  eventoDiClick(): void{
     
-    if (opzione == true)
-      alert("Benvenuto " + this.username + "!");
-  
-  }  
+    if (!this.disabile) {
+      
+      if (this.mioForm.get("password").value === this.mioForm.get("confermaPassword").value)
+        alert("Benvenuto " + this.mioForm.get("username").value + "!");
+      else
+        alert("Le due password non concidono");
+
+    }
+     
+
+  }
 
   ngOnInit() {
   }

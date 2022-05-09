@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -23,6 +23,7 @@ const routes: Routes = [
     path: 'converter',
     loadChildren: () => import('./pages/converter/converter.module').then( m => m.ConverterPageModule)
   },
+
 
 ];
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Form, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,16 +10,22 @@ export class LoginPage implements OnInit {
 
   titolo: string = "Benvenuti";
 
-  username: string;
-  password: string;
-
   c: number;
   f: number;
   km: number;
   mi: number;
 
-  constructor() { 
-    
+  mioForm;
+
+  disabile: boolean = true;
+
+  constructor(private fb: FormBuilder) { 
+
+    this.mioForm = fb.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required]
+    });
+
   }
 
   eventoNotifica(messaggio: string) {
@@ -51,9 +58,19 @@ export class LoginPage implements OnInit {
 
   }
 
+  eventoBottone(): void{
+    
+    if (this.mioForm.get("username").valid && this.mioForm.get("password").valid)
+      this.disabile = false;
+    else
+      this.disabile = true;
+
+  }
+
   eventoDiClick(): void{
     
-    alert("Ciao " + this.username + "!");
+    if(!this.disabile)
+      alert("Ciao " + this.mioForm.get("username").value + "!");
 
   }
 
