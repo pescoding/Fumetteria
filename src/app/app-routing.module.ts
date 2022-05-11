@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: 'converter',
     loadChildren: () => import('./pages/converter/converter.module').then( m => m.ConverterPageModule)
+  },  {
+    path: 'ordina',
+    loadChildren: () => import('./pages/ordina/ordina.module').then( m => m.OrdinaPageModule)
   },
+
 
 
 ];

@@ -1,0 +1,68 @@
+<br>
+<br>
+
+<ion-content>
+  <div class="ion-text-center">
+
+    <ion-grid>
+
+    <ion-row>
+
+      <ion-col></ion-col>
+
+      <ion-col>
+
+    <div *ngIf="!opt">
+      <ion-item>
+
+      <ion-label position="floating">Quanti numeri vuoi inserire?</ion-label>
+      <ion-input
+        (keyup.enter)="check()"
+        [(ngModel)]="n"
+        type="text"
+        id="n"
+        placeholder="n"
+      ></ion-input>
+
+    </ion-item>
+    
+    </div>
+
+  
+
+    <div *ngIf="!fine && opt ">
+
+      <ion-item>
+
+      <ion-label position="floating">Inserisci</ion-label>
+      <ion-input
+        (keyup.enter)="aggiungi()"
+        [(ngModel)]="aggiunta"
+        type="text"
+        id="aggiunta"
+      ></ion-input>
+
+    </ion-item>
+
+    </div>
+
+    <div *ngIf="opt && fine">
+
+      <ion-item>
+
+      <h1>L'array ordinato è {{A}}.</h1>
+
+    </ion-item>
+
+    </div>
+
+  </ion-col>
+
+  <ion-col></ion-col>
+
+  </ion-row>
+
+  </ion-grid>
+
+  </div>
+</ion-content>
